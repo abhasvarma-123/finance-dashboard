@@ -51,30 +51,13 @@ A clean, interactive finance dashboard built with **React + Vite**.
 ```
 finance-dashboard/
 ├── src/
-│   ├── components/
-│   │   ├── Navbar.jsx          # Top navigation + role selector + dark mode
-│   │   ├── Dashboard.jsx       # Main dashboard page
-│   │   ├── SummaryCards.jsx    # 4 summary metric cards
-│   │   ├── BalanceTrend.jsx    # SVG line chart (income vs expense over months)
-│   │   ├── SpendingBreakdown.jsx # Interactive donut chart
-│   │   ├── Transactions.jsx    # Transaction table with filters
-│   │   ├── TransactionModal.jsx # Add/Edit modal (Admin only)
-│   │   └── Insights.jsx        # Insights & analytics page
-│   ├── context/
-│   │   └── AppContext.jsx      # React Context for global state
-│   ├── data/
-│   │   └── transactions.js     # Mock transaction data + categories
-│   ├── utils/
-│   │   └── helpers.js          # Formatting & data computation utilities
-│   ├── App.jsx
-│   ├── main.jsx
-│   └── styles.css
+│   ├── App.jsx        # Everything: data, context, all components, styles
+│   └── main.jsx       # Entry point — renders App into #root
 ├── index.html
 ├── package.json
 ├── vite.config.js
 └── README.md
-```
-
+````
 ## Role-Based UI
 
 | Feature | Viewer | Admin |
@@ -100,7 +83,7 @@ Uses **React Context API** (`AppContext`) to manage:
 
 - React 18
 - Vite 5
-- Pure CSS (no UI library)
+- Pure CSS 
 - Custom SVG charts (no chart library)
 - React Context API
 - localStorage for persistence
