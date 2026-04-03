@@ -581,7 +581,7 @@ function Insights() {
         {[
           {icon:"🔥",label:"Top Spending",value:topCat?topCat[0]:"—",sub:topCat?`${fmt(topCat[1])} · ${Math.round((topCat[1]/totalExp)*100)}%`:"No data",accent:topCat?CATEGORY_COLORS[topCat[0]]:"#ccc"},
           {icon:"💰",label:"Savings Rate",value:income>0?`${Math.round(((income-expense)/income)*100)}%`:"—",sub:"of income retained",accent:"#0fa968"},
-          {icon:"📅",label:"Month-on-Month",value:curr&&prev?`${curr.expense>prev.expense?"▲":"▼"}${Math.abs(Math.round(((curr.expense-prev.expense)/prev.expense)*100))}%`:"—",sub:curr&&prev?(curr.expense>prev.expense?"More vs last month":"Less vs last month"):"",accent:curr&&prev&&curr.expense>prev.expense?"#d93025":"#0fa968"},
+          {icon:"📅",label:"Monthly Change",value:curr&&prev?`${curr.expense>prev.expense?"▲":"▼"}${Math.abs(Math.round(((curr.expense-prev.expense)/prev.expense)*100))}%`:"—",sub:curr&&prev?(curr.expense>prev.expense?"More vs last month":"Less vs last month"):"",accent:curr&&prev&&curr.expense>prev.expense?"#d93025":"#0fa968"},
         ].map((c,i)=>(
           <div key={i} className="ins-kpi-card" style={{borderTop:`3px solid ${c.accent}`}}>
             <div style={{fontSize:22}}>{c.icon}</div>
